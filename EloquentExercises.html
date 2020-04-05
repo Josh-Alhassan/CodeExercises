@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+		//Pogram for calculating FACTORIAL
+		function factorial(n) {
+ 			if (n === 0) {
+				return 1
+			} else {
+ 				return factorial(n-1) * n;
+ 				}
+			}
+
+		//CHAPTER ONE
+		// VALUES, TYPES AND OPERATORS
+
+		//Numeric data type
+		100 + 4 * 11;
+		(100 + 4) * 11;
+		314 % 100;
+		144 % 12;
+
+		//STRINGS data type
+		`Down on the sea`
+		"Lie on the ocean"
+		'Float on the ocean'
+		"This is the first line\nAnd this is the \t second"
+		//Concatenation
+		console.log("con" + "cat" + "e" + "nate");
+
+		//Back-ticks also Know as Template Literals
+		console.log(`half of 100 is ${100 / 2}`);
+
+		//UNARY OPERATORS
+			//TypeOf Operator
+		console.log(typeof 4.5)
+		console.log(typeof 'x')
+
+		//BOOLEAN VALUES
+		//Comparison
+		console.log(3 > 2)
+		console.log(3 < 2)
+		console.log("Aardvark" < "Zoroaster") //Strings can also be compared.
+		console.log('Z' < 'a');
+		console.log('Apple' == 'Orange');
+		console.log('Itchy' == 'Scratchy');
+
+		//LOGICAL OPERATOR
+			//and && Operator
+		console.log(true && false); // False
+		console.log(true && true); // True
+
+			// or || Operator
+		console.log(false || true); // True
+		console.log(false || false); // False
+
+		//Automatic type Conversion
+
+		console.log(8 * null)
+		// → 0
+		console.log("5" - 1)
+		// → 4
+		console.log("5" + 1)
+		// → 51
+		console.log("five" * 2)
+		// → NaN
+		console.log(false == 0)
+		// → true
+
+		//SHORT-CIRCUITING OF LOGICAL OPERATORS
+		console.log(null || "user")
+		// → user
+		console.log("Agnes" || "user")
+		// → Agnes
+
+//PROGRAM STRUCTURE
+
+	//EXPRESSIONS AND STATEMENTS
+	/* A fragment of code that produces a value is called an expression. A program is a list of statements Keywords are special words*/
+	console.log(`Program Structure // EXPRESSIONS `)
+	console.log(1);
+	console.log(!false);
+
+	//Bindings || Variables
+	console.log(`Bindings || Variables`)
+	let caught = 5 * 5;
+	console.log(caught);
+
+	let mood = 'light';
+	console.log(mood);
+	//Reassigning Mood
+	mood = 'Prayer';
+	console.log(mood);
+	//Little Exercise
+	let luigisDebt = 140;
+	luigisDebt = luigisDebt - 35;
+	console.log(`luigis Debt balance is $${luigisDebt}`);
+
+	let ten = 10;
+	console.log(ten * ten);
+	/* A single let statement may define multiple bindings. The definations should be seperated by commas. */
+	let one = 1, two = 2;
+	console.log(one + two);
+
+	var name = "Ayda";
+	const greeting = "Hello ";
+	console.log(greeting + name);
+
+	//FUNCTIONS
+	console.log('------------');
+	console.log('INBUILT FUNCTIONS');
+	console.log('------------');
+	//A function is a piece of program wrapped in a value
+	//Executing a function is called invoking, calling, applying it.
+	//Values given to functions are called arguments
+	prompt('Enter Passcode');
+
+	//Return Values
+	console.log('Value of Max and Min')
+	console.log(Math.max(2, 4, 8, 6));
+	console.log(Math.min(2, 4, 45) + 100);
+
+	//CONTROL FLOW
+	console.log('------------');
+	console.log('CONTROL FLOW');
+	console.log('------------');
+	let theNumber = Number(prompt("Pick a number"));
+	console.log("Your number is the square root of " + theNumber * theNumber);
+	//Conditional Expression
+	console.log('------------');
+	console.log('CONDITIONAL EXECUTION');
+	console.log('------------');
+	let pickNumber = Number(prompt('Pick a number'));
+	if (!Number.isNaN(pickNumber)) {
+		console.log("Your number is the square root of " + pickNumber * pickNumber);
+	} else {
+		console.log("Hey, why didn't you give me a number?");
+	}
+	//Two parts to choose from, Mulitple if/else pairs
+	console.log('----Multiple IF/ELSE')
+	let num = Number(prompt("pick a Number"));
+
+	if (num < 10) {
+		console.log('Small');
+	} else if (num < 100) {
+		console.log('Medium');
+	} else {
+		console.log('Large');
+	}
+	//One-Liner
+	console.log('----One-Liner');
+	if(1 + 1 == 2) console.log("it's true");
+
+	//WHILE AND DO LOOPS
+	console.log('------------');
+	console.log('while and Do loops');
+	console.log('------------');
+	//Loop is a peice of code that runs mulitple times
+	let number = 0;
+	while (number <= 12) {
+		number = number + 2;
+		console.log(number);
+		// number = number + 2;
+	}
+
+	//Writing a program for 2^10
+	let result = 1;
+	let counter = 0;
+	while(counter < 10) {
+		result = result * 2;
+		counter = counter + 1;
+	}
+	console.log(result);
+
+	//Do While Loop
+	console.log('------------');
+	console.log('Do loops');
+	console.log('------------');
+
+	let yourName;
+	do {
+		yourName = prompt('Who are you?')
+	} while (!yourName);
+	console.log(yourName);
+
+	//Identation
+	if (false != true) {
+		console.log('That makes sense')
+		if (1 < 2) {
+			console.log("No suprise there.")
+		}
+	}
+
+	//FOR LOOPS
+	console.log('------------');
+	console.log('FOR LOOPS');
+	console.log('------------');
+	//Just checking.... Didn't work
+	// let number = 0;
+	// for(number <= 12) {
+	// 	console.log(number);
+	// 	number = number + 2;
+	// }
+	for (let number = 0; number <= 12; number = number + 2) {
+		console.log(number);
+	}
+
+	//Writing a program for 2^10
+	let resultt = 1;
+	for (counter = 0; counter <= 10; counter++) {
+		resultt = resultt * 2;
+	}
+	console.log(resultt);
+
+	//Breaking out of a loop
+	console.log("-----breaking out of a loop")
+	for (let current = 20; ; current = current + 1) {
+		if(current % 7 == 0) {
+			console.log(current);
+			break;
+		}
+	}
+
+	//Updating Binding Succinctly
+	for(let number = 0; number <= 12; number +=2) {
+		console.log(number);
+	}
+
+	//Dispatching On a value with SWITCH
+	switch (prompt(`What's the weather like?`)) {
+		case "rainy":
+			console.log("Remember to bring an umbrella");
+			break;
+		case "Sunny":
+			console.log('Dress Lightly');
+			break;
+		case "Cloudy":
+			console.log('Go outside.');
+			break;
+		default:
+			console.log("Unknown weather type");
+			break;
+	}
+
+	//EXERCISE
+	for(let i = 0; i < 8; i++) {
+		console.log('#' * 1);
+	}
+	//Exercise FizzBuzz
+	for(let i = 1; i <= 100; i++) {
+		if(i % 3 === 0 && i % 5 === 0) {
+			console.log('FizzBuzz');
+		}
+		if(i % 5 === 0) {
+			console.log('Buzz');
+		}
+	}
+
+	//FUNCTIONS
+	//Defining a function
+	const square = function(x) {
+		return x * x;
+	};
+	console.log(square(12));
+
+	const makeNoise = function() {
+		console.log("Pling");
+	};
+	makeNoise();
+
+	const power = function(base, exponent) {
+		let result = 1;
+		for (count = 0; count < exponent; count++) {
+			result *= base;
+		}
+		return result;
+	};
+	console.log(power(2, 10));
+
+	//Bindings and Scopes
+	let x = 10;
+	if (true) {
+		let y = 20;
+		var z = 30;
+		console.log(x + y + z);
+	}
+	// y is not visible here
+	console.log(x + z);
+
+	//Nested Scope
+	const hummus = function(factor) {
+		const ingredient = function(amount, unit, name) {
+			let ingredientAmount = amount * factor;
+			if (ingredientAmount > 1) {
+				unit += "s"
+			}
+			console.log(`${ingredientAmount} ${unit} ${name}`);
+		};
+		ingredientAmount(1, 'can', 'Chickenpeas');
+		ingredient(0.25, "cup", "tahini");
+		ingredient(0.25, "cup", "lemon juice");
+		ingredient(1, "clove", "garlic");
+		ingredient(2, "tablespoon", "olive oil");
+		ingredient(0.5, "teaspoon", "cumin");
+	};
+
+	//function as values
+
+	let launchMissiles = function() {
+		missileSystem.launch("now");
+	};
+	if (safeMode) {
+		launchMissiles = function() {/* do nothing */};
+	}
+
+	//Declaration Notation
+	function future() {
+		return "you will have plenty of flying cars for the kingdom";
+	}
+
+	//Arrow Function
+	const horn = () => {
+		console.log('Toot');
+	};
+
+	//Optional Arguments
+	function minus(a, b) {
+		if(b=== undefined) return -a;
+		else return a - b;
+	}
+
+	console.log(minus(10));
+	console.log(minus(10, 5));
+
+	//Closure
+	function wrapValue(n) {
+		let local = n;
+		return () => local;
+	}
+	let wrap1 = wrapValue(1);
+	let wrap2 = wrapValue(2);7
+	console.log(wrap1());
+	console.log(wrap2());
+
+	function multiplier(factor) {
+		return number => number * factor;
+	}
+	let twice = multiplier(2);
+	console.log(twice(5));
+
+	//RECURSION
+	//This is a function that calls itself
+	function power(base, exponent) {
+		if(exponent == 0){
+			return 1;
+		} else {
+			return base * power(base, exponent - 1);
+		}
+	}
+
+	console.log(power(2, 8));
+
+	function findSolution(target) {
+		function find(current, history) {
+			if (current == target) {
+				return history;
+			} else if (current > target) {
+				return null;
+			} else {
+				return find(current + 5, `(${history} + 5)`) ||
+					   find(current * 3, `(${history} * 3)`);
+					}
+				}
+				return find(1, "1");
+			}
+			console.log(findSolution(24)); // → (((1 * 3) + 5) * 3)
+
+	//Growing Function
+	function printFarmInventory(cows, chicken) {
+		let cowString = String(cows);
+		while (cowString.length < 3) {
+			cowString = "0" + cowString;
+		}
+		console.log(`${cowString} Cows`);
+
+		let chickenString = String(chicken);
+		while (chickenString.length < 3) {
+			chickenString = "0" + chickenString
+		}
+		console.log(`${chickenString} Chickens`)
+	}
+
+	//Better Way to do that using Growing functions
+	function printZeroPaddedWithLabel(number, label) {
+		let numberString = String(number);
+		while(numberString.length < 3) {
+			numberString = "0" + numberString;
+		}
+		console.log(`${numberString} ${label}`)
+	}
+	function printFarmInventory(cows, chicken, pigs) {
+		printFarmInventory(cows, "Cows");
+		printFarmInventory(chicken, "Chickens");
+		printFarmInventory(pigs, "Pigs");
+	}
+
+	function zeroPad(number, width) {
+		let string = String(number);
+		while (string.length < width) {
+			string = "0" + string;
+		}
+		return string;
+		}
+		function printFarmInventory(cows, chickens, pigs) {
+		console.log(`${zeroPad(cows, 3)} Cows`);
+		console.log(`${zeroPad(chickens, 3)} Chickens`);
+		console.log(`${zeroPad(pigs, 3)} Pigs`);
+		}
+		printFarmInventory(7, 16, 3);
+
+		//QUIZ
+		let min = (a, b) => {
+			return Math.min(a,b);
+		}
+		min(45, 85);
+
+		//Quiz on Recursion
+		function isEven(num) {
+			if(num % 2 === 0){
+				return true;
+			} else {
+				return false;
+			}
+		}
+
+		//DATA STRUCTURES: OBJECTS AND ARRAYS
+		//Data Sets
+		let listOfNumbers = [2, 3, 5, 7, 11];
+		console.log(listOfNumbers[2]);
+		console.log(listOfNummbers[0]);
+		console.log(listOfNumbers[2 - 1]);
+
+		//Properties
+		console.log(listOfNumbers.length);
+		console.log(listOfNumbers["length"]);
+
+		//Methods
+		let doh = "Doh";
+		console.log(typeof doh.toUpperCase);
+		//Function
+		console.log(doh.toUpperCase());
+		//DOH
+		let sequence = [1, 2, 3];
+		sequence.push(4);
+		sequence.push(5);
+		console.log(sequence);
+		// => [1, 2, 3, 4, 5]
+		console.log(sequence.pop());
+		//5
+		consoole.log(sequence);
+		// => [1, 2, 3, 4]
+		// A stack, in programming, is a data structure that allows you to push values into it and pop them out again in the opposite order, so that the thing that was added last is removed first.
+
+		//Objects
+
+		let day1 = {
+			squirrel: false,
+			events: ['Works', 'Touched free', 'Pizza', 'Running'];
+		};
+
+		console.log(day1.squirrel);
+		//False
+		console.log(day1.wolf);
+		//Undefined
+		day1.wolf = false;
+		console.log(day1.wolf);
+		//False
+
+		let description = {
+			work: 'went to work',
+			"touched tree": 'Touch a tree'
+		};
+
+// 		curly braces have two meanings in JavaScript. At the start of a statement, they start a block of statements. In any other position, they describe an object.
+
+		//Using the delete Operator
+		let anObject = {
+			left: 1,
+			right: 2,
+		};
+		console.log(anObject.left);
+		// 1
+		delete anObject.left;
+		console.log(anObject.left);
+		// returns Undefined
+		console.log("left" in anObject);
+		// returns false
+		console.log('right' in anObject);
+		// returns true
+		// The binary in operator, when applied to a string and an object, tells you whether that object has a property with that name.
+
+		//To find our what properties an object has, we use the Object.keys function
+
+		console.log(Object.keys({X: 1, Y: 1, Z: 2}));
+		// returns ["X", "Y", "Z"]
+		// Object.assign function copies all properties from one object to another.
+
+		let objectA = {a: 1, b: 2};
+		Object.assign(objectA, {b: 3, C: 4});
+		console.log(objectA);
+		// returns {a: 1, b: 3, c: 4};
+
+		let journal = [
+		{events: ["Work", "Touched Free", "Pizza", "Running", "Television"],
+		squirrel: false},
+		{events: ["work", "ice cream", "cauliflower","Lasagna", "Touched tree", "brushed teeth"],
+		squirrel: false},
+		{events: ["weekend", "Cycling", "break", "Peanut", "Beer"],
+		squirrel: true},
+
+		];
+
+		//MUTABLITY
+
+		let object1 = {value: 10};
+		let object2 = object1;
+		let object3 = {value: 10};
+
+		console.log(object1 == object2);
+		// => True
+		console.log(object1 == object3);
+		// => False
+
+		object1.value = 15;
+		console.log(object2.value);
+		// => 15
+		console.log(object3.value);
+		// => 10
+
+		// a const binding to an object can itself not be changed and will continue to point at the same object, the contents of that object might change.
+
+		const score = {visitor: 0, home: 0};
+		// This is Okay
+		score.visitor = 1;
+		// This isn't allowed
+		score = {visitor: 1, home: 1};
+
+		// The Lycanthrope's Log
+		let journal = [];
+
+		function addEntry(events, squirrel) {
+			journal.push({events, squirrel});
+		}
+
+		addEntry(["work", "touched tree", "Pizza", "Running", "Television"], false);
+		addEntry(["Work", "Ice Cream", "cauliflower", "lasagana", "Touched tree", "Brushed teeth"], false);
+		addEntry(["weekend", "Cycling", "break", "peanut", "beer"], true);
+
+		// COmputing Correlation
+
+		function phi(table) {
+			return (table[3] * table[0] - table[2] * table[1]) / Math.sqrt((table[2] + table[3]) *
+								 (table[0] + table[1]) *
+								 (table[1] + table[3]) *
+								 (table[0] + table[2]));
+		}
+		console.log(phi([76, 9, 4, 1]));
+
+		function tableFor(event, journal) {
+			let table = [0, 0, 0, 0];
+			for (let i = 0; i < journal.length; i++) {
+				let entry = journal[i], index = 0;
+				if (entry.events.includes(event)) index += 1;
+				if (entry.squirrel) index += 2
+				table[index] += 1;
+			}
+			return table;
+		}
+		console.log(tableFor('Pizza', JOURNAL));
+
+
+		function journalEvents(journal) {
+			let events = [];
+			for (let entry of journal) {
+				for (let event of entry.events) {
+					if (!events.includes(event)) {
+						events.push(event);
+					}
+				}
+			}
+			return events;
+		}
+		console.log(journalEvents(JOURNAL));
+
+		for (let event of journalEvents(JOURNAL)) {
+			console.log(event + ":", phi(tableFor(event, JOURNAL)));
+}
+
+		for (let event of journalEvents(JOURNAL)) {
+			let correlation = phi(tableFor(event, JOURNAL));
+			if (correlation > 0.1 || correlation < -0.1) {
+				console.log(event + ":", correlation);
+			}
+		}
+
+		for (let entry of JOURNAL) {
+			if (entry.events.includes("peanuts") &&
+				!entry.events.includes("brushed teeth")) {
+			entry.events.push("peanut teeth");
+			}
+		}
+		console.log(phi(tableFor("peanut teeth", JOURNAL)));
+
+		//Further Arayology
+
+		let todoList = [];
+		function remember(task) {
+			todoList.push(task);
+		}
+
+		function getTask() {
+			return todoList.shift();
+		}
+		function rememberUrgently(task) {
+			todoList.unshift(task);
+		}
+
+		//lastIndex
+		console.log([0, 1, 2, 3, 4, 5].lastIndex(2));
+
+		function remove(array, index) {
+			return array.slice(0, index);
+			.concat(array.slice(index + 1))
+		}
+		console.log(remove(["a", "b", "c", "d", "e"], 2));
+
+		//Strings and Thier Properties
+		console.log("coconut".slice(4, 7));
+		// => nut
+		console.log("coconut".indexOf('u'));
+		// => 5
+		console.log("one two three four five".index('ee'));
+		//trim methods removes backspace tab whitespace
+		console.log(" 	okay \n ".trim());
+		// => okay
+
+		//padstart
+		console.log(String(6).padstart(3, "0"));
+		// => 006
+
+		//Split and Join Mothod
+		let sentence = "Secretarybirds specialize in stomping";
+		let words = sentence.split(" ");
+		console.log(words);
+
+		console.log(words.join(". "));
+
+		//Repeat Method
+		console.log("Joshua".repeat(3));
+		//JoshuaJoshuaJoshua
+
+		//The length property
+		let string = "abc";
+		console.log(string.length);
+		console.log(string[1]);
+
+		//REST PARAMETERS
+		function max(...numbers) {
+			let result = -infinity;
+			for (let number of numbers){
+				if (number > result) result = number
+			}
+			return result;
+		}
+
+		console.log(max(4, 1, 9, -2));
+		//???
+
+		let numbers = [5, 1, 9, 45];
+		console.log(max(...numbers));
+
+		let words = ["never", "fully"]
+		console.log("wiill", ...words, "understanding");
+
+		//THE MATH OBJECT
+		function randomPointOnCircle(radius) {
+			let angle = Math.random() * 2 * Math.PI;
+			return {
+				x: radius * Math.cos(angle);
+				y: radius * Math.sin(angle);
+			}
+		};
+		console.log(randomPointOnCircle(3));
+
+
+		//DESTRUCTION
+		function phi(table) {
+			return (table[3] * table[0] - table[2] * table[1]) /
+				Math.sqrt((table[2] + table[3]) *
+				(table[0] + table[1]) *
+				(table[1] + table[3]) *
+				(table[0] + table[2]));
+			}
+
+		function phi([n00, n01, n10, n11]) {
+			return (n11 * n00 - n10 * n01) / Math.sqrt((n10 + n11) * (n00 + n01) *
+				(n01 + n11) * (n00 + n10));
+		}
+
+		let {name} = {name: "faraji", age:23};
+		console.log(name);
+		// => Faraji
+
+		//JSON
+		{
+			"squirrel": false,
+			"events": ["work", "touched tree", "Pizza", "running"]
+		}
+
+		let string = JSON.stringify({squirrel: false,
+									events: ["weekend"]});
+		console.log(String);
+
+		console.log(JSON.parse(string).events);
+
+		class BankAccount {
+			constructor(name, balance) {
+				this.name = name;
+				this.balance = balance;
+			}
+		showBalance() {
+			console.log('balance: ' + this.balance + ' Euro');
+		}
+
+		deposit(amount) {
+			console.log('Depositing: ' + this.balance + ' Euro');
+			this.balance += amount;
+			this.showBalance();
+		}
+
+		withdraw(amount) {
+			if (amount > this.balance) {
+				console.log('Withdrawal Denied');
+			} else {
+				console.log('withdrawing ' + amount + ' Euro');
+				this.balance -= amount;
+				this.showBalance();
+			}
+		}
+	}
+
+	const newAccount = new BankAccount('Will Alexander', 499);
+
+	newAccount.withdraw(489);
+	newAccount.showBalance();
+
+
+	</script>
+	<title>Eloquent Javascript</title>
+</head>
+<body>
+
+</body>
+</html>
